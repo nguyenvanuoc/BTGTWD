@@ -1,0 +1,187 @@
+.header{
+    min-height: 0px;
+    margin-bottom: 0px;
+    border: none;
+    .corner(0px);
+    background: @main;
+    .navbar-default .navbar-nav>li>a{
+        padding: 10px 20px;
+        color: #fff;
+    }
+    .navbar-nav>li{
+        &:hover,&:focus,&.active{
+            >a{
+                background: fade(#000,10);    
+            }
+            
+        }
+        &:first-child{
+            > a{
+                &:before{
+                    display: none;
+                }    
+            }
+            
+        }
+        &:hover{
+            .dropdown-menu{
+                .block;
+            }
+        }
+        &.active,&.open{
+            >a{
+                color: #fff;
+                &:focus,&:active,&:hover{
+                    background: fade(#000,10);
+
+                }
+                    
+            }
+        }
+    }
+    .navbar-nav>li>a{
+        padding: 10px 10px;
+        color: #fff;
+        .relative;
+        .f13;
+        font-weight: bold;
+        text-transform: uppercase;
+        &:hover{
+            color: #fff;
+
+        }
+    }
+    
+
+    .navbar-collapse{
+        padding: 0px;
+        border: none;
+    }
+    .search{
+        .relative;
+        margin-top: 7px;
+        margin-right: 7px;
+        width: 250px;
+        .f15;
+        .form-control{
+            padding: 3px 10px;    
+            height: auto;
+            .f13;
+            .corner(0px);
+            padding-right: 30px;
+            &::placeholder{
+                .italic;
+            }
+        }
+
+    }
+    .icon{
+        .absolute;
+        top: 0px;
+        width: 30px;
+        right: 0px;
+        padding: 5px 0px;
+        .center;
+        color: @main;
+
+    }
+    
+    .box-search{
+        display: none;
+    }
+    @media (max-width: 1000px){
+        .box-search{
+            display: block;
+            margin-top: 5px;
+            .icon{
+                top: 0px;
+                right: 0px;
+            }
+        }
+        
+        .navbar-nav{
+            position: fixed;
+            top: 0px;
+            left: -100%;
+            margin: 0px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            width: 260px;
+            bottom: 0px;
+            background: @main;
+            z-index: 100;
+            overflow-y: auto;
+            &.open{
+                left: 0;
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.3s ease;
+            }
+            >li{
+                display: block;
+                width: 100%;
+                >a{
+                    &:before{
+                        display: none;
+                    }
+                }
+                &:hover{
+                    >.dropdown-menu{
+                        display: none;
+                    }
+                }
+                &.active{
+                    >.dropdown-menu{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .dropdown-menu{
+            position: relative;
+            width: 100%;
+            box-shadow: none;
+            border:0px;
+            background: fade(#000,10);
+            >li{
+
+                >a{
+                    color:#fff;
+                }
+                &:hover,&:focus,&.active{
+                    >a{
+                        background: fade(#fff,10);
+                    }   
+                }
+            }
+        }
+    }
+    
+
+}
+
+.nav-toggle{
+    display: none;
+    @media (max-width: 1000px){
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color:#fff;
+        background: @main;
+        display: block;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: 10;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+.timesytem{
+    padding: 10px 0px;
+    .italic;
+    color:@main;
+    text-align: right;
+}

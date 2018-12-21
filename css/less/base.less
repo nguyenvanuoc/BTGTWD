@@ -1,0 +1,408 @@
+
+@import url(_config.less);
+@import url(vars.less);
+
+/* Fonts */
+@font-face {
+    font-family: 'Roboto';
+    src:url('../fonts/roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/roboto/Roboto-Bold.woff') format('woff'), 
+        url('../fonts/roboto/Roboto-Bold.ttf') format('truetype'), 
+        url('../fonts/roboto/Roboto-Bold.svg#SFUFutura') format('svg');
+
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Roboto';
+    src:url('../fonts/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/roboto/Roboto-Regular.woff') format('woff'), 
+        url('../fonts/roboto/Roboto-Regular.ttf') format('truetype'), 
+        url('../fonts/roboto/Roboto-Regular.svg#SFUFutura') format('svg');
+
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src:url('../fonts/roboto/Roboto-Light.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/roboto/Roboto-Light.woff') format('woff'), 
+        url('../fonts/roboto/Roboto-Light.ttf') format('truetype'), 
+        url('../fonts/roboto/Roboto-Light.svg#SFUFutura') format('svg');
+
+    font-weight: 300;
+    font-style: 300;
+}
+@font-face {
+    font-family: 'RobotoCondensed';
+    src:url('../fonts/roboto_condesed/RobotoCondensed-Bold.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/roboto_condesed/RobotoCondensed-Bold.woff') format('woff'), 
+        url('../fonts/roboto_condesed/RobotoCondensed-Bold.ttf') format('truetype'), 
+        url('../fonts/roboto_condesed/RobotoCondensed-Bold.svg#SFUFutura') format('svg');
+
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'UTMAvo';
+    src:url('../fonts/UTMAvo/UTMAvo.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/UTMAvo/UTMAvo.woff') format('woff'), 
+        url('../fonts/UTMAvo/UTMAvo.ttf') format('truetype'), 
+        url('../fonts/UTMAvo/UTMAvo.svg#SFUFutura') format('svg');
+
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UTMAvo';
+    src:url('../fonts/UTMAvo/UTMAvoBold.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/UTMAvo/UTMAvoBold.woff') format('woff'), 
+        url('../fonts/UTMAvo/UTMAvoBold.ttf') format('truetype'), 
+        url('../fonts/UTMAvo/UTMAvoBold.svg#SFUFutura') format('svg');
+
+    font-weight: bold;
+    font-style: bold;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+    .borderbox;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 0.0px;
+    text-rendering: geometricPrecision;
+}
+body,.ms-WPBody {
+  font-family: Arial, sans-serif !important;
+  font-size: 14px;
+  line-height: normal;
+  background:#fff !important;
+  line-height: 1.2;
+  overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+}
+a{
+    &:hover{
+        color:@link;
+        text-decoration: none;
+    }
+}
+.scroll-top{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    .fixed;
+    bottom:10px;
+    right: 10px;
+    .rgba(#000,0.5);
+    .c(#fff);
+    line-height: 30px;
+    .center;
+    transform: translate(0px, 10px);
+    -ms-transform: translate(0px, 10px);
+    -webkit-transform: translate(0px, 10px);
+    -moz-transition-transform: translate(0px, 10px);
+    transition: all 0.5s ease;
+    opacity: 0;
+    .fa{
+        line-height: 40px;
+        .f18;
+    }
+    &:hover{
+        .rgba(#000,0.8);
+    }
+    &.show{
+        opacity: 1;
+        transition: all 0.5s ease;
+        transform: none;
+        -ms-transform: none;
+        -webkit-transform: none;
+        -moz-transition-transform: none;
+    }
+    
+}
+.container{
+    max-width: 1200px;
+    padding: 0px 15px;
+    width: 100%;
+}
+.image-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.title-main{
+    .f18;
+    .block;
+    .bold;
+    color: @main;
+    
+    margin-bottom: 20px;
+    position: relative;
+    .upper;
+    border-bottom: 2px solid #a6a7a7;
+    a,span{
+      color: #212121; 
+      position: relative;
+      display: inline-block;
+      padding-bottom: 5px;
+      padding-left: 0px;
+      z-index: 2;
+      
+    }
+    &.-color{
+        a,span{
+            &:before{
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0px;
+                right: 0px;
+                height: 2px;
+                background: @second;
+            }
+        }
+    }
+
+}
+.breadcrumb{
+    background:none;
+    border-bottom: 1px solid @borc;
+    .corner(0px);
+    padding: 10px 0px;
+    >li{
+        >a{
+
+        }
+    }
+}
+.section{
+    margin-bottom: 20px !important;
+}
+.pagination{
+    .corner(0px);
+    >li{
+        border-radius: 0px;
+        &:first-child,&:last-child{
+            >a{
+                border-radius: 0px;
+            }
+        }
+        >a{
+            color: @text;
+            padding: 5px 10px;
+            border-radius: 0px;
+            line-height: auto;
+
+        }
+        &.active,&:focus{
+            
+            >a{
+                background: @main;
+                color: #fff;
+                border-color: @main;
+            
+            }
+        }
+    }
+}
+#overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: fade(#000,60);
+    z-index: 99;
+    display: none;
+    &.show{
+        display: block;
+    }
+}
+
+
+@import url(header.less);
+@import url(main-content.less);
+@import url(sidebar.less);
+@import url(slider.less);
+
+.org-chart-canvas{
+    text-align: center;
+    max-width: 100%;
+    overflow: auto;
+    table{
+        width: 100%;
+    }
+    .chart{
+        width: 768px;
+        margin: auto;
+    }
+    td{
+        position: relative;
+        padding:0px 10px;
+        padding-bottom: 0px; 
+        vertical-align: top;
+    }
+    .title{
+        display: block;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background: #df4242;
+        
+        font-weight: bold;
+        color:#fff;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        justify-content: center;
+        &:hover{
+            opacity: 0.8;
+        }
+
+    }
+    .lines{
+        td{
+            padding: 20px 0px;    
+        }
+        
+    }
+    .rightLine{
+        border-right: 1px solid #000 !important;
+    }
+    .leftLine{
+        border-left: 1px solid #000 !important;
+    }
+    .topLine{
+        border-top: 1px solid #000 !important;
+    }
+    .downline{
+        height: 30px;
+        width: 1px;
+        margin: 0px auto;
+        position: relative;
+        background: #000;
+        right: 10px;
+
+    }
+    .arrow{
+        position: absolute;
+        bottom: -2px;
+        left: -4px;
+        width: 0px;
+        margin: auto;
+        height: 0px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 6px solid #000;
+
+    }
+    .centerLine{
+        width: 1px;
+        height: 20px;
+        border-left: 1px solid #000;
+        padding: 0px;
+
+    }
+    .last{
+        .arrow{
+            bottom: 30px;
+        }
+        .absLine{
+            &:before{
+                position: absolute;
+                content: "";
+                left: 0px;
+                width: 1px;
+                height: 45px;
+                top: 0px;
+                background: #000;
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 20px;
+                background: #000;
+                left: -10px;
+                top: 18px;
+                bottom: 0px;
+                margin: auto;
+            }
+        }
+        .title{
+            margin-top: 20px;
+        }
+    }
+}
+
+@import url(footer.less);
+@import url(media.less);
