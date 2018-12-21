@@ -33,30 +33,28 @@ var expandMenu;
         html+="<span>"+arr[i] + "</span>";
     };   
     $("#total-number").html(html);
-    if(window.innerWidth<=1000){
-        $(".header .navbar-nav a").click(function(e){
-            var el=$(this),
-                parent=$(this).parent();
-            if(parent.find(">.dropdown-menu").length){
-                  e.preventDefault();
-                  parent.siblings().removeClass("active");
-                  if(parent.hasClass("active")){
-                    parent.removeClass("active");    
-                  }else{
-                    parent.addClass("active");    
-                  }
-                  
-            }
-        });
-        $(".nav-toggle").click(function(){
-            $(".navbar-nav").addClass("open");
-            $("#overlay").addClass("show");
-        });
-        $("#overlay").click(function(){
-            $(".navbar-nav").removeClass("open");
-            $(this).removeClass("show");
-        });
-    }
+    $(".header .navbar-nav a").click(function(e){
+        var el=$(this),
+            parent=$(this).parent();
+        if(parent.find(">.dropdown-menu").length){
+              e.preventDefault();
+              parent.siblings().removeClass("active");
+              if(parent.hasClass("active")){
+                parent.removeClass("active");    
+              }else{
+                parent.addClass("active");    
+              }
+              
+        }
+    });
+    $(".nav-toggle").click(function(){
+        $(".navbar-nav").addClass("open");
+        $("#overlay").addClass("show");
+    });
+    $("#overlay").click(function(){
+        $(".navbar-nav").removeClass("open");
+        $(this).removeClass("show");
+    });
 
     var my_date_format = function(id){
         var d = new Date();
